@@ -18,16 +18,7 @@ from PIL import Image
 
 
 class DensePose:
-    """
-    DensePose used in this project is from Detectron2 (https://github.com/facebookresearch/detectron2).
-    These codes are modified from https://github.com/facebookresearch/detectron2/tree/main/projects/DensePose.
-    The checkpoint is downloaded from https://github.com/facebookresearch/detectron2/blob/main/projects/DensePose/doc/DENSEPOSE_IUV.md#ModelZoo.
-
-    We use the model R_50_FPN_s1x with id 165712039, but other models should also work.
-    The config file is downloaded from https://github.com/facebookresearch/detectron2/tree/main/projects/DensePose/configs.
-    Noted that the config file should match the model checkpoint and Base-DensePose-RCNN-FPN.yaml is also needed.
-    """
-
+    
     def __init__(self, model_path="./checkpoints/densepose_", device="cuda"):
         self.device = device
         self.config_path = os.path.join(model_path, "densepose_rcnn_R_50_FPN_s1x.yaml")

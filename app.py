@@ -145,17 +145,8 @@ if __name__ == "__main__":
     garment_images = list_dir(f"{example_dir}/garment")
 
     title = "## Leffa: Learning Flow Fields in Attention for Controllable Person Image Generation"
-    link = """[📚 Paper](https://arxiv.org/abs/2412.08486) - [🤖 Code](https://github.com/franciszzj/Leffa) - [🔥 Demo](https://huggingface.co/spaces/franciszzj/Leffa) - [🤗 Model](https://huggingface.co/franciszzj/Leffa)
-           
-           Star ⭐ us if you like it!
-           """
-    news = """## News
-            - 09/Jan/2025. Inference defaults to float16, generating an image in 6 seconds (on A100).
-
-            More news can be found in the [GitHub repository](https://github.com/franciszzj/Leffa).
-            """
-    description = "This is virtual-try on project , code reference taken from this repo https://github.com/franciszzj/Leffa"
-    note = "Note: The models used in the demo are trained solely on academic datasets. Virtual try-on uses VITON-HD/DressCode, and pose transfer uses DeepFashion."
+    description = "This is virtual-try on project"
+    note = "Virtual try-on uses VITON-HD/DressCode, and pose transfer uses DeepFashion."
 
     with gr.Blocks(theme=gr.themes.Default(primary_hue=gr.themes.colors.pink, secondary_hue=gr.themes.colors.red)).queue() as demo:
         gr.Markdown(title)
